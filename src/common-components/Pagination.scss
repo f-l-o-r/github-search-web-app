@@ -1,0 +1,25 @@
+.pagination {
+    @apply list-none mx-3 mb-11 p-0;
+}
+
+.page-item {
+    li {
+        @apply float-left p-1;
+    }
+
+    a {
+        @apply text-black float-left;
+        padding: 8px 16px;
+        text-decoration: none;
+    }
+}
+
+.pagination {
+    .active {
+        @apply bg-sky-900 text-white;
+    }
+
+    a:hover:not(.active) {
+        @apply bg-gray-300;
+    }
+}

@@ -1,0 +1,10 @@
+.table-repositories {
+    @apply table-auto border-collapse w-full mt-8 bg-gray-100 mb-3 ;
+    thead{
+        @apply bg-sky-900 text-white;
+    }
+
+    tr {
+        @apply border-y border-slate-300;
+    }
+}
