@@ -12,8 +12,8 @@ const Pagination = ({ dataPerPage, totalData, paginate, currentPage }: Paginatio
     for (let i = 1; i < Math.ceil(totalData / dataPerPage); i++) {
         pageNumbers.push(i);
     }
-    
-    if(pageNumbers.length==0) {
+
+    if (pageNumbers.length === 0) {
         return <></>;
     }
 
@@ -21,18 +21,18 @@ const Pagination = ({ dataPerPage, totalData, paginate, currentPage }: Paginatio
         <nav className="pagination">
             <ul className="page-item">
                 <li>
-                    <a href="#">{'<<'}</a>
+                    <p>{'<<'}</p>
                 </li>
                 {pageNumbers.map(number => (
                     <li key={number} >
-                        <a href="!#"  onClick={() => paginate(number)} className={`${currentPage === number ? "active" : ""}`}>
+                        <a href="!#" onClick={() => paginate(number)} className={`${currentPage === number ? "active" : ""}`}>
                             {number}
                         </a>
                     </li>
                 ))
                 }
                 <li>
-                    <a href="#">{'>>'}</a>
+                    <p>{'>>'}</p>
                 </li>
             </ul>
         </nav>

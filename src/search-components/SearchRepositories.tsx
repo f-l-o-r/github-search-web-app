@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './SearchRepositories.scss'; 
 import { getSearchRepositoryByName } from "../service/Service";
-import CircleAvatar from "../common-components/CircleAvatar";
 import RepositoriesList from "./RepositoriesList";
 import Pagination from "../common-components/Pagination";
 
@@ -10,7 +9,7 @@ function SearchRepository() {
     const [repos, setRepos] = useState([]);
     const [loading, setLoading] = useState(false); 
     const [currentPage, setCurrentPage] = useState(1);
-    const [dataPerPage, setDataPerPage] = useState(5);
+    const [dataPerPage] = useState(5);
 
     //get current data
     const indexofLastData = currentPage * dataPerPage;
