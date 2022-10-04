@@ -52,7 +52,7 @@ function SearchRepository() {
                 <input className="search-input-submit"type="submit" value="Search"></input>
             </form>
             <RepositoriesList loading={loading} data={currentData}></RepositoriesList>
-            <Pagination dataPerPage={dataPerPage} totalData={repos.length} paginate={paginate} currentPage={currentPage}></Pagination>
+            <Pagination dataPerPage={dataPerPage} totalData={repos.length} paginate={paginate} currentPage={currentPage} loading={loading}></Pagination>
         </div>
     );
 }

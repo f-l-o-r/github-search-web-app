@@ -25,7 +25,7 @@ const RepositoriesList = ({data, loading} : RepositoriesListInterface) => {
         return <Loading />
     }
     else if(data.length === 0 ) {
-        return <div className="text-center text-sky-800 text-xl">No data was found! please enter a valid input and try again</div>
+        return <div className="text-center text-sky-800 text-xl">Please enter a valid input and try again</div>
     }
     else {
         return (
@@ -41,9 +41,9 @@ const RepositoriesList = ({data, loading} : RepositoriesListInterface) => {
                 {data.map((repo: DataRepository) => {
                     return (
                         <tr key={repo.id}>
-                            <td><a className="px-2 text-sky-700" target="_blank" rel="noopener noreferrer" href={repo.html_url}>{repo.name}</a></td>
+                            <td><a className="px-2 text-sky-700 " target="_blank" rel="noopener noreferrer" href={repo.html_url}>{repo.name}</a></td>
                             <td><CircleAvatar url={repo.owner.avatar_url} title={repo.owner.login} /></td>
-                            <td><p className="px-2">{repo.description}</p></td>
+                            <td><p className="px-2 ">{repo.description}</p></td>
                         </tr>
                     )
                 })}
