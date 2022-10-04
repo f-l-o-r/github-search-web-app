@@ -25,7 +25,7 @@ const RepositoriesList = ({data, loading} : RepositoriesListInterface) => {
         return <Loading />
     }
     else if(data.length === 0 ) {
-        return <div className="text-center text-red-800 text-xl">No data was found!</div>
+        return <div className="text-center text-sky-800 text-xl">No data was found! please enter a valid input and try again</div>
     }
     else {
         return (

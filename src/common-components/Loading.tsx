@@ -1,10 +1,12 @@
 import loading from "../assets/loading.gif";
 
 const Loading = () => {
-    return( <>
-    <img className="w-24 float-left" src={loading} alt="loading..."></img>
-    <p>Loading...</p>
-    </>
+    return( 
+    <div className="h-20">
+    <img className="w-20 float-left" src={loading} alt="loading..."></img>
+    <p className="py-7">Loading...</p>
+    </div>
+
     );
 }
 
